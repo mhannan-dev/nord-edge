@@ -30,6 +30,7 @@
 	<link rel="stylesheet" type="text/css" href="{{ URL::asset('frontend')}}/css/fontawesome.css">
 	<link rel="stylesheet" type="text/css" href="{{ URL::asset('frontend')}}/css/brands.css">
 	<link rel="stylesheet" type="text/css" href="{{ URL::asset('frontend')}}/css/solid.css">
+	<link rel="stylesheet" type="text/css" href="{{ URL::asset('frontend')}}/css/fontawesome.css">
 
 	<!-- ==============================================
 	Custom Stylesheet

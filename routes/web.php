@@ -14,15 +14,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('/', 'Frontend\HomeController@getIndex')->name('home');
-Route::get('/about', 'Frontend\AboutUsController@getIndex')->name('about');
-Route::get('/services', 'Frontend\ServicesController@services')->name('service');
+Route::get('/', 'Frontend\HomePageController@getIndex')->name('home');
+Route::get('/about', 'Frontend\HomePageController@getAbout')->name('about');
+Route::get('/services', 'Frontend\HomePageController@getService')->name('service');
+Route::get('/projects', 'Frontend\HomePageController@getProject')->name('project');
+Route::get('/contact', 'Frontend\HomePageController@getContact')->name('contact');
 
-Route::group(['prefix' => 'frontend'], function () {
-
+Route::group(['prefix' => 'backend'], function () {
+    
 
 });
 
 Auth::routes();
-
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');

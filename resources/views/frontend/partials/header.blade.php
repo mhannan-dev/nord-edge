@@ -63,26 +63,26 @@
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav">
                         <li class="nav-item dropdown">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="{{ route('home')}}">
                                 Home
                             </a>
 
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="about.html">About</a>
+                            <a class="nav-link" href="{{ route('about')}}">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="services.html">Services</a>
+                            <a class="nav-link" href="{{ route('service')}}">Services</a>
                         </li>
 
                         <li class="nav-item dropdown">
-                            <a class="nav-link" href="projects.html">
+                            <a class="nav-link" href="{{ route('project')}}">
                                 Projects
                             </a>
 
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contact</a>
+                            <a class="nav-link" href="{{ route('contact')}}">Contact</a>
                         </li>
                     </ul>
                 </div>

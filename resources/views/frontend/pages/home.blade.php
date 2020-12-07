@@ -4,8 +4,6 @@
 
     @include('frontend.partials.slider')
 
-
-
     <!-- WHY Choose us -->
 	<div class="section bg-primary">
 		<div class="content-wrap pt-0">
