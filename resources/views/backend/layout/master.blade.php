@@ -27,6 +27,13 @@
     <link rel="stylesheet" href="{{ URL::asset('backend/admin')}}/plugins/owl.carousel/dist/assets/owl.theme.default.min.css">
     <link rel="stylesheet" href="{{ URL::asset('backend/admin')}}/dist/css/theme.min.css">
     <script src="{{ URL::asset('backend/admin')}}/src/js/vendor/modernizr-2.8.3.min.js"></script>
+    
+
+    @stack('styles')
+    @stack('scripts')
+
+     
+
 </head>
 
 <body>
@@ -151,8 +158,7 @@
 </div>
 
 
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-<script>window.jQuery || document.write('<script src="{{ URL::asset('backend/admin')}}/src/js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+<script src="{{ URL::asset('backend/admin')}}/src/js/vendor/jquery-3.3.1.min.js"></script>
 <script src="{{ URL::asset('backend/admin')}}/plugins/popper.js/dist/umd/popper.min.js"></script>
 <script src="{{ URL::asset('backend/admin')}}/plugins/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="{{ URL::asset('backend/admin')}}/plugins/perfect-scrollbar/dist/perfect-scrollbar.min.js"></script>
@@ -171,6 +177,18 @@
 <script src="{{ URL::asset('backend/admin')}}/js/widgets.js"></script>
 <script src="{{ URL::asset('backend/admin')}}/js/charts.js"></script>
 <script src="{{ URL::asset('backend/admin')}}/dist/js/theme.min.js"></script>
-
+<!-- Show uploaded image  -->
+<script type="text/javascript">
+        $(document).ready(function(){
+            $("#image").change(function(e){
+                var reader = new FileReader();
+                reader.onload = function(e){
+                    $('#showImage').attr('src',e.target.result);
+                }
+                reader.readAsDataURL(e.target.files['0']);
+            });
+        });
+</script>
+@include('sweetalert::alert')
 </body>
 </html>

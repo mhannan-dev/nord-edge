@@ -11,7 +11,7 @@
                         <div class="nav-item has-sub">
                             <a href="#"><i class="ik ik-list"></i><span>Manage Slider</span></a>
                             <div class="submenu-content">
-                                <a href="#" class="menu-item">View Sliders</a>
+                                <a href="{{ route('slider.index')}}" class="menu-item">View Sliders</a>
                             </div>
                         </div>
                         <div class="nav-item has-sub">

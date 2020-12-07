@@ -20,10 +20,15 @@ Route::get('/services', 'Frontend\HomePageController@getService')->name('service
 Route::get('/projects', 'Frontend\HomePageController@getProject')->name('project');
 Route::get('/contact', 'Frontend\HomePageController@getContact')->name('contact');
 
-Route::group(['prefix' => 'backend'], function () {
-    
 
-});
+
 
 Auth::routes();
-Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+
+
+Route::group(array('middleware' => 'auth'), function () {
+    
+    Route::get('/dashboard', 'Backend\DashboardController@index')->name('dashboard');
+    Route::resource('slider', 'Backend\SlidersController');
+
+});
